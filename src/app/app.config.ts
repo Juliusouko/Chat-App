@@ -11,14 +11,12 @@ import { provideRouter } from '@angular/router';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    importProvidersFrom(
-      provideFirebaseApp(() => initializeApp(environment.firebase)),
-      provideFirestore(() => getFirestore()),
-      provideAuth(() => getAuth()),
-      provideFunctions(() => getFunctions()),
-      provideStorage(() => getStorage()),
-      provideMessaging(() => getMessaging())
-    ),
-    provideRouter(routes), provideFirebaseApp(() => initializeApp({"projectId":"chat-app-24059","appId":"1:273486990858:web:9f7d8057e1090c51b419f3","storageBucket":"chat-app-24059.firebasestorage.app","apiKey":"AIzaSyCOMqwDcDwvHYLIPBvb28y-pCDFbtT3pTM","authDomain":"chat-app-24059.firebaseapp.com","messagingSenderId":"273486990858","measurementId":"G-LCX2N64CXY"})), provideAuth(() => getAuth()), provideFirestore(() => getFirestore()), provideMessaging(() => getMessaging()), provideStorage(() => getStorage())
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
+    provideAuth(() => getAuth()),
+    provideFunctions(() => getFunctions()),
+    provideStorage(() => getStorage()),
+    provideMessaging(() => getMessaging()),
+    provideRouter(routes)
   ],
 };
